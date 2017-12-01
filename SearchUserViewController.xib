@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchUserViewController" customModule="AlphaANativeApp" customModuleProvider="target">
+            <connections>
+                <outlet property="activityIndicator" destination="bYc-GQ-Lnf" id="Qaw-oc-nRA"/>
+                <outlet property="collectionView" destination="WZc-q3-Cp0" id="clJ-fh-SIx"/>
+                <outlet property="searchBar" destination="NGZ-ya-yTn" id="Moc-Cy-ucT"/>
+                <outlet property="view" destination="KiJ-aJ-DfO" id="mwh-ML-bYh"/>
+            </connections>
+        </placeholder>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="KiJ-aJ-DfO">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" showsHorizontalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="WZc-q3-Cp0">
+                    <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="pvc-QX-zku">
+                        <size key="itemSize" width="100" height="150"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="10" minY="10" maxX="25" maxY="10"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="NGZ-ya-yTn">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="bYc-GQ-Lnf">
+                    <rect key="frame" x="177" y="323" width="20" height="20"/>
+                </activityIndicatorView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="WZc-q3-Cp0" firstAttribute="top" secondItem="NGZ-ya-yTn" secondAttribute="bottom" id="7My-p1-7xT"/>
+                <constraint firstItem="NGZ-ya-yTn" firstAttribute="leading" secondItem="KiJ-aJ-DfO" secondAttribute="leading" id="Dok-RL-wW8"/>
+                <constraint firstAttribute="trailing" secondItem="NGZ-ya-yTn" secondAttribute="trailing" id="IJr-5e-9iV"/>
+                <constraint firstItem="bYc-GQ-Lnf" firstAttribute="centerY" secondItem="KiJ-aJ-DfO" secondAttribute="centerY" id="Law-5F-Kd7"/>
+                <constraint firstItem="WZc-q3-Cp0" firstAttribute="top" secondItem="NGZ-ya-yTn" secondAttribute="bottom" id="Lwk-Lz-S4x"/>
+                <constraint firstItem="NGZ-ya-yTn" firstAttribute="top" secondItem="KiJ-aJ-DfO" secondAttribute="top" id="N7K-yK-EXk"/>
+                <constraint firstItem="bYc-GQ-Lnf" firstAttribute="centerX" secondItem="KiJ-aJ-DfO" secondAttribute="centerX" id="O0j-ka-121"/>
+                <constraint firstItem="WZc-q3-Cp0" firstAttribute="top" secondItem="NGZ-ya-yTn" secondAttribute="bottom" id="jMI-ot-hHQ"/>
+                <constraint firstAttribute="trailing" secondItem="WZc-q3-Cp0" secondAttribute="trailing" id="m1j-N5-dvr"/>
+                <constraint firstItem="WZc-q3-Cp0" firstAttribute="leading" secondItem="KiJ-aJ-DfO" secondAttribute="leading" id="rbP-BC-ZEE"/>
+                <constraint firstAttribute="bottom" secondItem="WZc-q3-Cp0" secondAttribute="bottom" id="tza-0b-Yx1"/>
+            </constraints>
+            <point key="canvasLocation" x="39.5" y="53.5"/>
+        </view>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+    </objects>
+</document>

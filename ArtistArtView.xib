@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ArtistArtView" customModule="AlphaANativeApp" customModuleProvider="target">
+            <connections>
+                <outlet property="activityIndicator" destination="5Y7-CF-CMO" id="Bx3-mx-EIW"/>
+                <outlet property="collectionView" destination="TV6-8o-5Lg" id="sZ4-I1-goI"/>
+                <outlet property="cvHeightConstraint" destination="Bvk-Jv-afW" id="L78-Nd-kuO"/>
+                <outlet property="uploadArtButton" destination="M42-ix-fqu" id="0MV-dg-I5w"/>
+                <outlet property="view" destination="iN0-l3-epB" id="khi-g2-fIm"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M42-ix-fqu">
+                    <rect key="frame" x="16" y="16" width="343" height="40"/>
+                    <color key="backgroundColor" red="0.31785643409999997" green="0.80387452410000004" blue="0.70114382009999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="M42-ix-fqu" secondAttribute="height" multiplier="343:40" id="sc1-02-0ee"/>
+                    </constraints>
+                    <state key="normal" title="Upload Art">
+                        <color key="titleColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </state>
+                    <connections>
+                        <action selector="uploadArtPressed:" destination="-1" eventType="touchUpInside" id="OlP-XB-tMs"/>
+                    </connections>
+                </button>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="TV6-8o-5Lg">
+                    <rect key="frame" x="16" y="72" width="343" height="586"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="999" constant="586" identifier="cvHeight" id="Bvk-Jv-afW"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="spn-j6-RmW">
+                        <size key="itemSize" width="100" height="100"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="5Y7-CF-CMO">
+                    <rect key="frame" x="177" y="107" width="20" height="20"/>
+                </activityIndicatorView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="M42-ix-fqu" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="1Ws-wq-KVG"/>
+                <constraint firstItem="TV6-8o-5Lg" firstAttribute="top" secondItem="M42-ix-fqu" secondAttribute="bottom" constant="16" id="2Vx-fc-ozs"/>
+                <constraint firstAttribute="trailing" secondItem="M42-ix-fqu" secondAttribute="trailing" constant="16" id="9jd-WM-Mbz"/>
+                <constraint firstItem="M42-ix-fqu" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="16" id="AJT-6i-ixk"/>
+                <constraint firstItem="5Y7-CF-CMO" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Kys-i4-mPx"/>
+                <constraint firstItem="5Y7-CF-CMO" firstAttribute="top" secondItem="M42-ix-fqu" secondAttribute="bottom" constant="51" id="NnI-2l-ybo"/>
+                <constraint firstAttribute="bottom" secondItem="TV6-8o-5Lg" secondAttribute="bottom" constant="9" id="O4o-BV-6r3"/>
+                <constraint firstItem="TV6-8o-5Lg" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="XXg-kU-CI6"/>
+                <constraint firstAttribute="trailing" secondItem="TV6-8o-5Lg" secondAttribute="trailing" constant="16" id="esB-lg-xUA"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="34.5" y="54.5"/>
+        </view>
+    </objects>
+</document>
